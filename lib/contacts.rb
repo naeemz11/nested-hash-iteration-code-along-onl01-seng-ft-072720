@@ -19,7 +19,8 @@ contacts.each do |person, conact_details_hash|
 if person == "Freddy Mercury"
   conact_details_hash.each do |atribute, data|
     if atribute == favorite_ice_cream_flavors
-      favorite_ice_cream_flavors.shift
+      data.delete_if {|ice_cream| ice_cream == "strawberry"}
+    end 
     end 
   end 
 end 
